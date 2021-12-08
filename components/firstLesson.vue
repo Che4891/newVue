@@ -1,6 +1,18 @@
 <!-- Please remove this file from your project -->
 <template>
   <div class="wrapper">
+    <ul class="menu">
+      <li class="menu-item"> 
+        <nuxt-link to='/first-lesson'>First-lesson</nuxt-link>
+      </li>
+      <li class="menu-item">
+        <nuxt-link to='/second-lesson'>Second-lesson</nuxt-link>
+      </li> 
+      <li class="menu-item"> 
+        <nuxt-link to='/third-lesson'>Third-lesson</nuxt-link>
+      </li>
+      <li class="menu-item"> </li>
+    </ul>
     <!-- <h1> {{text}} </h1>
     <c>+</c>
     <h2>Mama</h2>
@@ -22,6 +34,14 @@
       :value="password" 
       @input="passlInput($event.target.value)"/>
     </label>
+    <div class="new-wrap">
+      <button @click="awayValue">-</button>
+      <input type="number"
+      :min="minValue"
+      :max="maxValue"
+      :value="inputValue">
+       <button @click="addValue">+</button>
+    </div>
   </div>
 </template>
 <script>
@@ -30,6 +50,9 @@ export default {
     text: "Єва",
     email: "anton@ukr.net",
     password: " 123456789",
+    minValue: 0,
+    maxValue: 10,
+    inputValue: 1
   }),
   methods: {
     emailInput(value) {
@@ -37,7 +60,17 @@ export default {
     },
     passlInput(value) {
       this.password = value
+    },
+    awayValue() {
+      if (this.inputValue > this.minValue) {
+        this.inputValue--
+      }
+    },
+      addValue() {
+    if (this.inputValue < this.maxValue) {
+      this.inputValue++
     }
+  }
   }
 };
 </script>
@@ -45,7 +78,7 @@ export default {
 <style scoped>
 .wrapper {
   width: 100%;
-  height: 100vh;
+  height: 300px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -66,5 +99,8 @@ span {
 img {
   width: 250px;
   height: 200px;
+}
+.new-wrap {
+  margin-bottom: 90px;
 }
 </style>
