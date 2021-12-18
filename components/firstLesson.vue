@@ -1,23 +1,6 @@
 <!-- Please remove this file from your project -->
 <template>
   <div class="wrapper">
-    <ul class="menu">
-      <li class="menu-item"> 
-        <nuxt-link to='/first-lesson'>First-lesson</nuxt-link>
-      </li>
-      <li class="menu-item">
-        <nuxt-link to='/second-lesson'>Second-lesson</nuxt-link>
-      </li> 
-      <li class="menu-item"> 
-        <nuxt-link to='/third-lesson'>Third-lesson</nuxt-link>
-      </li>
-      <li class="menu-item"> </li>
-    </ul>
-    <!-- <h1> {{text}} </h1>
-    <c>+</c>
-    <h2>Mama</h2>
-    <span>=</span>
-    <img src="https://klike.net/uploads/posts/2020-05/1590564848_1.jpg" alt="hard"> -->
     {{email}}
     <label
       >Email
@@ -46,8 +29,8 @@
 </template>
 <script>
 export default {
+  name: 'firstLesson',
   data: () => ({
-    text: "Єва",
     email: "anton@ukr.net",
     password: " 123456789",
     minValue: 0,

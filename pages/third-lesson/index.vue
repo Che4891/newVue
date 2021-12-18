@@ -1,9 +1,10 @@
 <template>
-  <thirdLesson/>
+  <thirdLesson />
 </template>
 <script>
-import thirdLesson from "~/components/third-lesson.vue"   
+import thirdLesson from "~/components/thirdLesson.vue";
 export default {
+  layout: "layout",
   components: {
     thirdLesson,
   },

@@ -27,6 +27,7 @@
 </template>
 <script>
 export default {
+    name: 'thirdLesson',
   data: () => ({
     isShow: true,
     isClasses: {

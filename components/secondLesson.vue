@@ -1,17 +1,5 @@
 <template>
   <div class="wrapper">
-    <ul class="menu">
-      <li class="menu-item"> 
-        <nuxt-link to='/first-lesson'>First-lesson</nuxt-link>
-      </li>
-      <li class="menu-item">
-        <nuxt-link to='/second-lesson'>Second-lesson</nuxt-link>
-      </li> 
-      <li class="menu-item"> 
-        <nuxt-link to='/third-lesson'>Third-lesson</nuxt-link>
-      </li>
-      <li class="menu-item"> </li>
-    </ul>
     <h1>научись зарабатывать от 50л в час</h1>
     <div class="card">
       <img
@@ -48,6 +36,7 @@
 </template>
 <script>
 export default {
+  name: 'SecondLesson',
   data: () => ({
     firstName: "Anton",
     lastNAme: "Antonovech",
