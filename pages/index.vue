@@ -1,14 +1,23 @@
+
 <template>
-  <testInput/>
+  <h2>Vue basics</h2>
 </template>
-
 <script>
-import testInput from '~/components/testInput.vue'
-
 export default {
-  name: 'AgreementsInformation',
-  components: {
-    testInput,
-  },
-}
+  layout: "layout",
+  data: () => ({}),
+};
 </script>
+
+<style>
+h2 {
+  text-align: center;
+  color: red;
+}
+ ul,
+  ol {
+    list-style: none;
+    margin: 0;
+    padding: 0 !important;
+  }
+</style>
