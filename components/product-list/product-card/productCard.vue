@@ -14,7 +14,7 @@
             <div class="card__balance">
                 stock balance: {{product.balance}}
             </div>
-            <button class="card__button">
+            <button @click="addToBasket" class="card__button">
                 buy
             </button>
         </div>
@@ -61,5 +61,10 @@ export default {
 
 
   }),
+  methods: {
+      addToBasket () {
+          this.$emit('addToBasket')
+      }
+  }
 };
 </script>

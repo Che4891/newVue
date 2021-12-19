@@ -3,18 +3,33 @@
         <h2>
             Tabels
         </h2>
+        <div class="search-input">
+            <input type="text">
+            <button>Search</button>
+        </div>
         <ul>
             <li class="product-list" v-for="(product, index) in products" :key="index" >
-                <productCard :product='product'/>
+                <productCard :product='product'
+                @addToBasket='addToBasket(index)'/>
             </li>
         </ul>
     </div>
 </template>
-<style scoped>
+<style scoped >
     .wrapper ul {
        display: flex;
        justify-content: space-around;
     }
+    .search-input {
+        display: flex;
+        
+    }
+    .search-input input {
+            padding: 3px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
 </style>
 <script>
 import productCard from "~/components/product-list/product-card/productCard.vue"
@@ -27,7 +42,7 @@ export default {
         {
           title: 'Tabel №1',
           description: 'product description',
-          productImg: ' https://lh3.googleusercontent.com/proxy/kfLzIgWcLs2KR88LB3jUNXh0uRJEtVAl-G60RjCmVGovnu4qKtrOfB5WzV8_2cgyDEelHImfKlYrON2IuqdwZyDrleBmTHBD3l2zr0OJ1Wz8yXIu4erZmHdXNpQkW8TIVNO-M3JYx_D0IRYDXv30EolfnHnyMM_Gz5CvhjKDwaiaHkOMi5a5wg',
+          productImg: 'https://welovemebel.com.ua/upload/resize_cache/iblock/b21/320_196_2/b21d2d276eb76637458d368c94b4e8b9.jpg',
           price: 20000,
           balance: 35
         },
@@ -47,5 +62,10 @@ export default {
         }
     ]
   }),
+  methods: {
+      addToBasket (index) {
+          console.log(index);
+      }
+  }
 }
 </script>
