@@ -3,7 +3,9 @@
     <h5 class="modal__title">
       {{ title }}
     </h5>
-    <div class="modal__body" @scroll="scrollBody">
+    <div class="modal__body" 
+    @scroll="scrollBody"
+    ref="modalDody">
       <slot name="text"></slot>
     </div>
     <button class="modal__btn" @click="closeModal">Cancel</button>
@@ -19,8 +21,11 @@ export default {
     closeModal() {
       this.$emit("close");
     },
-    scrollBody (e) {
-          console.log(e);
+    scrollBody () {
+          const modalBody = this.$refs.modalDody
+          if (modalBody.clientHeight + modalBody.scrollTop >= modalBody.scrollHeight) {
+            this.notActive = true
+          }
       }
   },
   props: {
