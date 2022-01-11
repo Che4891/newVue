@@ -19,6 +19,8 @@ export default {
      { txt: 'Search-name', link: '/search-name'},
      { txt: 'Reacts', link: '/fourth-lesson'},
      { txt: 'Forms', link: '/forms'},
+     { txt: 'Slots', link: '/slots'},
+      { txt: 'Filters', link: '/filters'},
     ]
   }),
 };

@@ -5,6 +5,9 @@
 <script>
 export default {
   layout: "layout",
+  created() {
+    this.$store.dispatch('loadReactions', 1000)
+  },
   data: () => ({}),
 };
 </script>
